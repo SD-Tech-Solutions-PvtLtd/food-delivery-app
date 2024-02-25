@@ -9,7 +9,9 @@ import {  K8ExternalIp } from 'src/app/constants/url';
 
 export class OrderService {
 
-  private apiUrl = K8ExternalIp+'/order/saveOrder';
+  //private apiUrl = K8ExternalIp+'/order/saveOrder';
+
+  private apiUrl ='http://localhost:9094/order/save';
 
   constructor(private http: HttpClient) { }
 
@@ -21,6 +23,7 @@ export class OrderService {
   };
 
   saveOrder(data: any):Observable<any>  {
+    console.log('your order is going to save .... ')
     return this.http.post<any>(this.apiUrl, data);
   }
 

@@ -9,7 +9,7 @@ import { K8ExternalIp } from 'src/app/constants/url';
 })
 export class FoodItemService {
 
-    private apiUrl = K8ExternalIp+'/foodCatalogue/fetchRestaurantAndFoodItemsById/';
+    private apiUrl = 'http://localhost:9093/foodItem/fetchRestaurantAndFoodItemsById/';
 
     constructor(private http: HttpClient) { }
 
